@@ -1,3 +1,5 @@
+import os
 from Classes.ServerConnection import ServerConnection
 
-ServerConnection(("0.0.0.0", 9339))
+port = int(os.environ.get("PORT", 9339))
+ServerConnection(("0.0.0.0", port))
